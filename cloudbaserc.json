@@ -1,0 +1,43 @@
+{
+  "version": "2.0",
+  "envId": "{{env.ENV_ID}}",
+  "framework": {
+    "name": "strapi",
+    "plugins": {
+      "client": {
+        "use": "@cloudbase/framework-plugin-container",
+        "inputs": {
+          "serviceName": "strapi",
+          "servicePath": "/",
+          "localPath": "./",
+          "uploadType": "package",
+          "containerPort": 1337,
+          "envVariables": {
+            "DATABASE_NAME": "strapi"
+          },
+          "volumeMounts": {
+            "/srv/app": "Strapi_CFS"
+          }
+        }
+      }
+    },
+    "requirement": {
+      "addons": [
+        {
+          "type": "CFS",
+          "name": "Strapi_CFS"
+        },
+        {
+          "type": "CynosDB",
+          "name": "Strapi",
+          "envMap": {
+            "IP": "DATABASE_HOST",
+            "PORT": "DATABASE_PORT",
+            "USERNAME": "DATABASE_USERNAME",
+            "PASSWORD": "DATABASE_PASSWORD"
+          }
+        }
+      ]
+    }
+  }
+}
