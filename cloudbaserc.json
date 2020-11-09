@@ -16,7 +16,7 @@
             "DATABASE_NAME": "strapi"
           },
           "volumeMounts": {
-            "/srv/app": "Strapi_CFS"
+            "/srv/app": "strapi-cfs"
           }
         }
       }
@@ -25,7 +25,7 @@
       "addons": [
         {
           "type": "CFS",
-          "name": "Strapi_CFS"
+          "name": "strapi-cfs"
         },
         {
           "type": "CynosDB",
