@@ -29,7 +29,7 @@
         },
         {
           "type": "CynosDB",
-          "name": "Strapi",
+          "name": "strapi",
           "envMap": {
             "IP": "DATABASE_HOST",
             "PORT": "DATABASE_PORT",
