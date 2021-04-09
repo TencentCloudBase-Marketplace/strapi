@@ -1,4 +1,4 @@
-FROM ccr.ccs.tencentyun.com/tcb_public/strapi_base:12-alpine:12-alpine
+FROM ccr.ccs.tencentyun.com/tcb_public/strapi_base:12-alpine
 
 WORKDIR /srv/app
 
